@@ -16,5 +16,6 @@ dependencies {
 }
 
 test {
+    println ("In test task")
     useTestNG()
 }
