@@ -12,7 +12,7 @@ repositories {
 dependencies {
 // https://mvnrepository.com/artifact/org.testng/testng
     testImplementation group: 'org.testng', name: 'testng', version: '7.5'
-
+    implementation 'org.seleniumhq.selenium:selenium-java:4.4.0'
 }
 
 test {
