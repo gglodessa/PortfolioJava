@@ -84,7 +84,7 @@ public class  Test1 {
             driver.findElement(By.xpath("//a[@href='/upload']")).click();
 
             logger.info("7. Add downloaded file to Select file");
-            driver.findElement(By.id("file-upload")).sendKeys("C:/file/sample.png");
+            driver.findElement(By.id("file-upload")).sendKeys("C:/Users/olexiy.klein/Downloads/sample.png");
 
             logger.info("8. Click Upload");
             driver.findElement(By.className("button")).click();
