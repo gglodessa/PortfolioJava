@@ -120,14 +120,12 @@ public class  Test1 {
                 WebElement unChecked = driver.findElement(By.xpath("//*[@id='checkboxes']/input[2]"));
                 Assert.assertEquals(unChecked.isSelected(), false, "checked");
 
-                System.out.println(unChecked.isSelected());
 
                 logger.info("4. Install Checkboxes 1 and check that Checkboxes 1 is installed");
                 driver.findElement(By.xpath("//*[@id='checkboxes']/input[1]")).click();
                 WebElement checked =driver.findElement(By.xpath("//*[@id='checkboxes']/input[1]"));
-
                 Assert.assertEquals(checked.isSelected(), true, "check#2");
-                System.out.println(checked.isSelected());
+
 
 
 
