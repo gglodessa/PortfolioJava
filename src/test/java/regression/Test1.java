@@ -17,7 +17,7 @@ public class  Test1 {
 
     @Test
     public void AddAndDeleteElements() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\olexiy.klein\\IdeaProjects\\AQA\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\olexiy.klein\\IdeaProjects\\AQA\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
 
@@ -57,7 +57,7 @@ public class  Test1 {
     @Test
 
     public void downloadUpload() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\olexiy.klein\\IdeaProjects\\AQA\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\olexiy.klein\\IdeaProjects\\AQA\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
 
@@ -102,7 +102,7 @@ public class  Test1 {
     @Test
 
         public void CheckCheckboxes() {
-            System.setProperty("webdriver.chrome.driver", "C:\\Users\\olexiy.klein\\IdeaProjects\\AQA\\chromedriver.exe");
+            //System.setProperty("webdriver.chrome.driver", "C:\\Users\\olexiy.klein\\IdeaProjects\\AQA\\chromedriver.exe");
             WebDriver driver = new ChromeDriver();
 
 

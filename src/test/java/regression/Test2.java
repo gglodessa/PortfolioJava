@@ -9,14 +9,12 @@ import org.testng.annotations.Test;
 import java.util.logging.Logger;
 
 public class Test2 {
-    public static final Logger logger = Logger.getGlobal();
 
-    public Test2() {
-    }
+    public static final Logger logger = Logger.getGlobal();
 
     @Test
     public void NativelyGETRequest() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\olexiy.klein\\IdeaProjects\\AQA\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\olexiy.klein\\IdeaProjects\\AQA\\chromedriver.exe");
         ChromeDriver driver = new ChromeDriver();
 
         try {
