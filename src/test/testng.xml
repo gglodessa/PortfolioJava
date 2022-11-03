@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/olexiy.klein/IdeaProjects/AQA - Copy">
+        <classes>
+            <class name="regression.Test1">
+                <methods>
+                    <include name="AddAndDeleteElements"/>
+                    <include name="downloadUpload"/>
+                    <include name="CheckCheckboxes"/>
+                </methods>
+            </class>
+            <class name="regression.Test2">
+                <methods>
+                    <include name="NativelyGETRequest"/>
+                </methods>
+            </class>
+            <class name="regression.Test3">
+                <methods>
+                    <include name="lessonsNumberNine"/>
+                </methods>
+            </class>
+            <class name="smoke.Test1">
+                <methods>
+                    <include name="logIn"/>
+                    <include name="wrongPassworld"/>
+                    <include name="lockedOutUser"/>
+                </methods>
+            </class>
+            <class name="smoke.Test2">
+                <methods>
+                    <include name="checkBox"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
