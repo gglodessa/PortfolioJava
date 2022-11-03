@@ -70,8 +70,8 @@ public class  Test1 {
             logger.info("2. Go to File Download");
             driver.findElement(By.xpath("//*/ul/li[17]/a")).click();
 
-            logger.info("3. Download sample.png file");
-            driver.findElement(By.xpath("//a[@href='download/sample.png']")).click();
+            logger.info("3. Download ziemia.jpg file");
+            driver.findElement(By.xpath("//a[@href='download/ziemia.jpg']")).click();
 
             logger.info("4. Back to start page");
             driver.navigate().back();
@@ -84,14 +84,14 @@ public class  Test1 {
             driver.findElement(By.xpath("//a[@href='/upload']")).click();
 
             logger.info("7. Add downloaded file to Select file");
-            driver.findElement(By.id("file-upload")).sendKeys("C:/Users/olexiy.klein/Downloads/sample.png");
+            driver.findElement(By.id("file-upload")).sendKeys("C:/Users/olexiy.klein/Downloads/ziemia.jpg");
 
             logger.info("8. Click Upload");
             driver.findElement(By.className("button")).click();
 
             logger.info("9. Check if a message is displayed");
             String fileUpload  = driver.findElement(By.xpath("//div[@class='example']")).getText();
-            Assert.assertEquals(fileUpload, "File Uploaded!\nsample.png", "Check#2");
+            Assert.assertEquals(fileUpload, "File Uploaded!\nziemia.jpg", "Check#2");
 
 
         } finally {
