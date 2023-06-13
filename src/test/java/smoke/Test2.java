@@ -1,5 +1,4 @@
 package smoke;
-//Установка чекбоксов через условия
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -10,12 +9,13 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
+import regression.Test1;
 
 import java.util.logging.Logger;
 
 public class Test2 {
     private WebDriver driver;
-    public static final Logger logger = Logger.getGlobal();
+    private static final Logger logger = Logger.getLogger(Test1.class.getName());
 
     @BeforeSuite
     public void downloadDriver() {
@@ -35,20 +35,16 @@ public class Test2 {
         driver.findElement(By.xpath("//a[@href='/checkboxes']")).click();
 
         logger.info("2. Check that if checkbox 1 is false set it to true");
-        WebElement checkboxTrue = driver.findElement(By.xpath("//*[@id='checkboxes']/input[1]"));
-        boolean bool1 = checkboxTrue.isSelected();
-        if (bool1 == false) {
-            checkboxTrue.click();
+        WebElement checkboxIsSelected = driver.findElement(By.xpath("//*[@id='checkboxes']/input[1]"));
+        if (!checkboxIsSelected.isSelected()) {
+            checkboxIsSelected.click();
         }
 
         logger.info("3. Check that if checkbox 2 is true set it to false");
-
         WebElement checkboxFalse = driver.findElement(By.xpath("//*[@id='checkboxes']/input[2]"));
-        boolean bool2 = checkboxFalse.isSelected();
-        if (bool2 == true) {
+        if (checkboxFalse.isSelected()) {
             checkboxFalse.click();
         }
-
     }
 
     @AfterMethod

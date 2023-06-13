@@ -13,8 +13,9 @@ dependencies {
     implementation 'org.testng:testng:7.1.0'
 
 // https://mvnrepository.com/artifact/org.testng/testng
-    testImplementation 'org.testng:testng:7z.6.0'
-    implementation 'org.seleniumhq.selenium:selenium-java:4.4.0'
+    testImplementation group: 'org.testng', name: 'testng', version: '7.8.0'
+// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.9.1'
 // https://mvnrepository.com/artifact/io.rest-assured/rest-assured
     testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '5.2.0'
     // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager

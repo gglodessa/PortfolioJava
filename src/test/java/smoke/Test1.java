@@ -40,8 +40,6 @@ public class Test1 {
         logger.info("2. Check basket");
         assertFalse(driver.findElements(By.id("shopping_cart_container")).isEmpty(),
                 "User is not logged in shopping cart icon not found");
-
-
     }
 
     @Test
@@ -55,8 +53,6 @@ public class Test1 {
         assertEquals(driver.findElement(By.xpath("//*[contains(text(),'Epic sadface:')]")).getText(),
                 "Epic sadface: Username and password do not match any user in this service",
                 "Login failed");
-
-
     }
 
     @Test
@@ -70,8 +66,6 @@ public class Test1 {
         assertEquals(driver.findElement(By.xpath("//*[contains(text(),'Epic sadface:')]")).getText(),
                 "Epic sadface: Sorry, this user has been locked out.",
                 "Login locked");
-
-
     }
 
     @AfterMethod

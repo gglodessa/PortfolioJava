@@ -10,11 +10,11 @@ import java.util.logging.Logger;
 
 public class Test2 {
 
-    public static final Logger logger = Logger.getGlobal();
+    private static final Logger logger = Logger.getGlobal();
 
     @Test
     public void NativelyGETRequest() {
-        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\olexiy.klein\\IdeaProjects\\AQA\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
         ChromeDriver driver = new ChromeDriver();
 
         try {
@@ -24,12 +24,13 @@ public class Test2 {
             driver.findElement(By.xpath("//a[@href='/frames']")).click();
             driver.findElement(By.xpath("//a[@href='/iframe']")).click();
             logger.info("3. Run natively GET request https://jsonplaceholder.typicode.com/users");
-            Response response = (Response)RestAssured.get("https://jsonplaceholder.typicode.com/users", new Object[0]).andReturn();
+            Response response = (Response)
+                    RestAssured.get("https://jsonplaceholder.typicode.com/users", new Object[0]).andReturn();
             logger.info("4. Enter data from the page in the input field");
-            driver.findElement(By.xpath("//*[@class='tox-edit-area__iframe']")).sendKeys(new CharSequence[]{response.asPrettyString()});
+            driver.findElement(By.xpath("//*[@class='tox-edit-area__iframe']"))
+                    .sendKeys(new CharSequence[]{response.asPrettyString()});
         } finally {
             driver.quit();
         }
-
     }
 }
