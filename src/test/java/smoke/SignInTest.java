@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
 
-public class Test1 {
+public class SignInTest {
     private WebDriver driver;
     public static final Logger logger = Logger.getGlobal();
 

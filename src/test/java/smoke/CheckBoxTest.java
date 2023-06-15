@@ -9,13 +9,13 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-import regression.Test1;
+import regression.AddElementDownloadUploadImageCheckBoxTest;
 
 import java.util.logging.Logger;
 
-public class Test2 {
+public class CheckBoxTest {
     private WebDriver driver;
-    private static final Logger logger = Logger.getLogger(Test1.class.getName());
+    private static final Logger logger = Logger.getLogger(AddElementDownloadUploadImageCheckBoxTest.class.getName());
 
     @BeforeSuite
     public void downloadDriver() {

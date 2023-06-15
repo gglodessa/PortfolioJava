@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-public class Test3 {
+public class CheckTitleTest {
     private WebDriver driver;
 
     @BeforeSuite

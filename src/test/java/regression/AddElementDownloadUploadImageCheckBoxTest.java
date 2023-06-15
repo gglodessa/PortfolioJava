@@ -12,10 +12,10 @@ import org.testng.annotations.Test;
 import java.util.List;
 import java.util.logging.Logger;
 
-public class Test1 {
+public class AddElementDownloadUploadImageCheckBoxTest {
 
     private WebDriver driver;
-    private static final Logger logger = Logger.getLogger(Test1.class.getName());
+    private static final Logger logger = Logger.getLogger(AddElementDownloadUploadImageCheckBoxTest.class.getName());
 
     @BeforeMethod
     public void setUp() {
