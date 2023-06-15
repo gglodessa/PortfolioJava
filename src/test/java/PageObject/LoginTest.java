@@ -3,8 +3,8 @@ package PageObject;
 import static org.testng.Assert.fail;
 
 import UIObjects.data.Account;
-import UIObjects.pages.InventoryPage;
-import UIObjects.pages.LoginPage;
+import UIObjects.pages.InventoryPageSauceDemo;
+import UIObjects.pages.LoginPageSauceDemo;
 import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTestTwo {
@@ -12,12 +12,12 @@ public class LoginTest extends BaseTestTwo {
 
   @Test(description = "Test successful Login")
   public void testSuccessfulLogin() {
-    LoginPage loginPage = new LoginPage(driver);
-    loginPage.usernameInput.sendKeys(account.getLogin());
-    loginPage.passwordInput.sendKeys(account.getPassword());
-    loginPage.loginButton.click();
+    LoginPageSauceDemo loginPageSauceDemo = new LoginPageSauceDemo(driver);
+    loginPageSauceDemo.usernameInput.sendKeys(account.getLogin());
+    loginPageSauceDemo.passwordInput.sendKeys(account.getPassword());
+    loginPageSauceDemo.loginButton.click();
 
-    new InventoryPage(driver).shouldSeePrimaryHeader();
+    new InventoryPageSauceDemo(driver).shouldSeePrimaryHeader();
 
     fail("Failing test");
   }

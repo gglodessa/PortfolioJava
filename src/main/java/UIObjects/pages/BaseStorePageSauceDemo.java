@@ -3,20 +3,20 @@ package UIObjects.pages;
 import UIObjects.components.PrimaryHeader;
 import org.openqa.selenium.WebDriver;
 
-public abstract class BaseStorePage extends BaseComponent {
+public abstract class BaseStorePageSauceDemo extends BaseComponent {
 
   private final PrimaryHeader header = new PrimaryHeader(driver);
 
-  public BaseStorePage(WebDriver driver) {
+  public BaseStorePageSauceDemo(WebDriver driver) {
     super(driver);
   }
 
-  public BaseStorePage shouldSeePrimaryHeader() {
+  public BaseStorePageSauceDemo shouldSeePrimaryHeader() {
     header.shouldSeePrimaryHeader();
     return this;
   }
 
-  public CartPage openCart() {
+  public CartPageSauceDemo openCart() {
     return header.openCart();
   }
 }
