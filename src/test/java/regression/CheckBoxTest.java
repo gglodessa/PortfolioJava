@@ -1,4 +1,4 @@
-package smoke;
+package regression;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
