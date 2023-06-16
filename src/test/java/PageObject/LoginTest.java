@@ -18,7 +18,5 @@ public class LoginTest extends BaseTestTwo {
     loginPageSauceDemo.loginButton.click();
 
     new InventoryPageSauceDemo(driver).shouldSeePrimaryHeader();
-
-    fail("Failing test");
   }
 }
