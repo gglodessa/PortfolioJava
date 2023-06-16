@@ -1,7 +1,5 @@
 package PageObject;
 
-import static org.testng.Assert.fail;
-
 import UIObjects.data.Account;
 import UIObjects.pages.InventoryPageSauceDemo;
 import UIObjects.pages.LoginPageSauceDemo;
