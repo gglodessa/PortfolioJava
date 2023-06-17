@@ -1,9 +1,10 @@
 package seleniumAdvanced;
 
-import static org.testng.Assert.assertEquals;
 import org.openqa.selenium.By;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertEquals;
 
 public class WindowTest extends BaseTest {
 

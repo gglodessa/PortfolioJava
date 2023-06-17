@@ -1,17 +1,12 @@
 package seleniumAdvanced;
 
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertNull;
-import static org.testng.Assert.assertThrows;
-
-import java.time.Duration;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.ScriptTimeoutException;
-import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.*;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.time.Duration;
+
+import static org.testng.Assert.*;
 
 public class ImplicitWaitTest extends BaseTest {
 

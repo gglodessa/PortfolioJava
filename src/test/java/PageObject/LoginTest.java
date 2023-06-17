@@ -5,16 +5,20 @@ import UIObjects.pages.InventoryPageSauceDemo;
 import UIObjects.pages.LoginPageSauceDemo;
 import org.testng.annotations.Test;
 
+import static org.testng.Assert.fail;
+
 public class LoginTest extends BaseTestTwo {
-  Account account = Account.STANDARD_USER;
+    Account account = Account.STANDARD_USER;
 
-  @Test(description = "Test successful Login")
-  public void testSuccessfulLogin() {
-    LoginPageSauceDemo loginPageSauceDemo = new LoginPageSauceDemo(driver);
-    loginPageSauceDemo.usernameInput.sendKeys(account.getLogin());
-    loginPageSauceDemo.passwordInput.sendKeys(account.getPassword());
-    loginPageSauceDemo.loginButton.click();
+    @Test(description = "Test successful Login")
+    public void testSuccessfulLogin() {
+        LoginPageSauceDemo loginPageSauceDemo = new LoginPageSauceDemo(driver);
+        loginPageSauceDemo.usernameInput.sendKeys(account.getLogin());
+        loginPageSauceDemo.passwordInput.sendKeys(account.getPassword());
+        loginPageSauceDemo.loginButton.click();
 
-    new InventoryPageSauceDemo(driver).shouldSeePrimaryHeader();
-  }
+        new InventoryPageSauceDemo(driver).shouldSeePrimaryHeader();
+
+        fail("Failing test");
+    }
 }

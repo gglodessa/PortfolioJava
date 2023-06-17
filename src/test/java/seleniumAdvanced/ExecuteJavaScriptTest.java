@@ -1,14 +1,14 @@
 package seleniumAdvanced;
 
-import static org.testng.Assert.assertTrue;
-
-import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.ScriptKey;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import seleniumAdvanced.BaseTest;
+
+import java.time.Duration;
+
+import static org.testng.Assert.assertTrue;
 
 public class ExecuteJavaScriptTest extends BaseTest {
     private final String EMAIL = "test12312312312312312313@test.com";

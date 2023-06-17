@@ -19,7 +19,7 @@ public class SignInTest {
     public static final Logger logger = Logger.getGlobal();
 
     @BeforeSuite
-    public void downloadDriver(){
+    public void downloadDriver() {
         WebDriverManager.chromedriver().setup();
     }
 
@@ -69,7 +69,7 @@ public class SignInTest {
     }
 
     @AfterMethod
-    public void tearDown(){
+    public void tearDown() {
         driver.quit();
     }
 }

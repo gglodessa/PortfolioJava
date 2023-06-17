@@ -1,15 +1,15 @@
 package seleniumAdvanced;
 
-import static org.testng.Assert.assertEquals;
+import org.openqa.selenium.By;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import org.openqa.selenium.By;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
-import seleniumAdvanced.BaseTest;
+
+import static org.testng.Assert.assertEquals;
 
 public class FileUploadTest extends BaseTest {
 
