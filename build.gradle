@@ -30,6 +30,10 @@ dependencies {
     testImplementation 'io.qameta.allure:allure-assertj:2.12.1'
     testImplementation 'io.qameta.allure:allure-rest-assured:2.12.1'
     testImplementation 'io.qameta.allure:allure-java-commons:2.12.1'
+
+    // https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc
+    implementation 'org.xerial:sqlite-jdbc:3.36.0.3'
+
 }
 
 test {
