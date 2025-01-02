@@ -1,6 +1,8 @@
-package seleniumAdvanced;
+package webdriveruniversity;
 
-import org.openqa.selenium.By;
+import UIObjects.data.Url;
+import UIObjects.pages.BaseTest;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -9,24 +11,22 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 
-import static org.testng.Assert.assertEquals;
-
 public class FileUploadTest extends BaseTest {
 
     private String filePath;
 
     @BeforeMethod
     public void setUp() throws IOException {
-        driver.get("http://webdriveruniversity.com/File-Upload/index.html");
+        agent.openUrl(Url.WEB_DRIVER_UNIVERSITY_URL + "File-Upload/index.html");
         filePath = prepareFile();
     }
 
     @Test
     public void testFileUpload() {
-        driver.findElement(By.id("myFile")).sendKeys(filePath);
-        driver.findElement(By.id("submit-button")).click();
+        agent.onUiTestingPlaygroundPage().uploadFileButton.sendKeys(filePath);
+        agent.onUiTestingPlaygroundPage().submitFileButton.click();
 
-        assertEquals(driver.switchTo().alert().getText(), "Your file has now been uploaded!",
+        Assert.assertEquals(agent.getDriver().switchTo().alert().getText(), "Your file has now been uploaded!",
                 "File was not uploaded!");
     }
 
